@@ -1,0 +1,5 @@
+N = input()
+integers = list(map(int,input().split()))
+unique_integers = list(set(integers))
+avg = round(sum(unique_integers)/len(unique_integers),3)
+print(avg)
