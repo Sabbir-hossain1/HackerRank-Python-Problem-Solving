@@ -1,30 +1,19 @@
-# solution 1
-# symmetric_diff = []
-# m = int(input().rstrip())
-# a = set(map(int,input().rstrip().split()))
-# n = input().rstrip()
-# b = set(map(int,input().rstrip().split()))
-# 
-# intersect = a.intersection(b)
-# a = a.difference(intersect)
-# b = b.difference(intersect)
-# symmetric_diff = list(a.union(b))
-# symmetric_diff.sort()
-# for value in symmetric_diff:
-#     print(value)
+# You are given two sets of student roll numbers.
+# One set has subscribed to the English newspaper,
+# and one set has subscribed to the French newspaper. 
+# Your task is to find the total number of students
+# who have subscribed to either the English or
+# the French newspaper but not both.
+# input: 
+# 9
+# 1 2 3 4 5 6 7 8 9
+# 9
+# 10 1 2 3 11 21 55 6 8
+# output: 8 (The roll numbers of students who have subscriptions to English or French newspapers but not both are:
+# 4 5 7 9 10 11 21 55 )
 
-# Solution 2
-
-# m = int(input())
-# a = set(map(int,input().split()))
-# n = int(input())
-# b = set(map(int,input().split()))
-# print(*sorted(a^b),sep='\n')
-
-# Solution 3
-
-m = int(input().rstrip())
-a = set(map(int,input().split()))
-n = int(input().rstrip())
-b = set(map(int,input().split()))
-print(*sorted(a.symmetric_difference(b)),sep='\n')
+n = input()
+set1 = set(map(int,input().rstrip().split()))
+n = input()
+set2 = set(map(int,input().rstrip().split()))
+print(len(set1.symmetric_difference(set2)))
