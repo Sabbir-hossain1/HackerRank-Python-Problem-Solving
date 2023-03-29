@@ -1,0 +1,8 @@
+from itertools import combinations
+_,l,k = input(),input().split(),int(input())
+comb = list(combinations(l,k))
+count_a = 0
+for i in comb:
+    if 'a' in i:
+        count_a = count_a + 1
+print(count_a/len(comb))
